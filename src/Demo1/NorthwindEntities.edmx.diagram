@@ -5,6 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6c0bdc9f63fb4770bee537319072dad4" Name="Diagram1" >
+        <EntityTypeShape EntityType="NorthwindModel.TableWithGuid" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

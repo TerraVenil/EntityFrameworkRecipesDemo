@@ -27,6 +27,7 @@ namespace Demo1
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<TableWithGuid> TableWithGuids { get; set; }
     
         public virtual ObjectResult<CustOrderHist_Result> CustOrderHist(string customerID)
         {

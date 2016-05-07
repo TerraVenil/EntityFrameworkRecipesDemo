@@ -64,6 +64,21 @@
     <Compile Include="Employee_Sales_by_Country_Result.cs">
       <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="ManyToManyEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManyToManyEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManyToManyEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManyToManyEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManyToManyEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManyToManyEntities.edmx</DependentUpon>
+    </Compile>
     <Compile Include="NorthwindEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,7 +96,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesByCategory_Result.cs">
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Sales_by_Year_Result.cs">
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableWithGuid.cs">
       <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Ten_Most_Expensive_Products_Result.cs">
@@ -94,6 +115,14 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NorthwindEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="ManyToManyEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ManyToManyEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ManyToManyEntities.edmx.diagram">
+      <DependentUpon>ManyToManyEntities.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="NorthwindEntities.edmx.diagram">
       <DependentUpon>NorthwindEntities.edmx</DependentUpon>
     </None>
@@ -103,6 +132,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ManyToManyEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManyToManyEntities.edmx</DependentUpon>
+      <LastGenOutput>ManyToManyEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ManyToManyEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManyToManyEntities.edmx</DependentUpon>
+      <LastGenOutput>ManyToManyEntities.cs</LastGenOutput>
+    </Content>
     <Content Include="NorthwindEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NorthwindEntities.edmx</DependentUpon>

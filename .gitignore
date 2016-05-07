@@ -1,0 +1,28 @@
+# Temporary files
+*~*
+*.bak
+
+# VS files
+*.dbmdl
+*.ncb
+*.suo
+*.vspscc
+
+# Settings
+*.dotCover
+*.DotSettings
+*.StyleCop
+*.user
+
+# Folders
+bin/
+App_Data/
+obj/
+sql/
+debug/
+release/
+build/
+.nuget/
+.vs/
+packages/*
+!packages/repositories.config

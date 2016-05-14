@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="NorthwindModel.Order" Width="1.5" PointX="8" PointY="2.375" />
         <AssociationConnector Association="NorthwindModel.FK_Orders_Customers" />
         <AssociationConnector Association="NorthwindModel.FK_Order_Details_Orders" />
+        <EntityTypeShape EntityType="NorthwindModel.LetterLanguageView" Width="1.875" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

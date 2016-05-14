@@ -82,6 +82,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GuidEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="LetterLanguageView.cs">
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="ManyToManyEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

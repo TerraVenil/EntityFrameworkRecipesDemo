@@ -10,6 +10,10 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
+            using (var dbContext = new Entities())
+            {
+                var result = dbContext.LetterLanguageViews.ToList();
+            }
         }
     }
 }

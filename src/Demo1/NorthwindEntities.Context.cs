@@ -30,6 +30,7 @@ namespace Demo1
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Order_Detail> Order_Details { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<LetterLanguageView> LetterLanguageViews { get; set; }
     
         public virtual ObjectResult<CustOrderHist_Result> CustOrderHist(string customerID)
         {

@@ -51,6 +51,15 @@
           <Property Name="ShipPostalCode" Type="nvarchar" MaxLength="10" />
           <Property Name="ShipCountry" Type="nvarchar" MaxLength="15" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.LetterLanguageView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LetterLanguageView">
+          <Key>
+            <PropertyRef Name="Letter" />
+          </Key>
+          <Property Name="Letter" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Language" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <Association Name="FK_Order_Details_Orders">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
           <End Role="Order Details" Type="Self.Order Details" Multiplicity="*" />
@@ -101,6 +110,12 @@
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order Details" EntityType="Self.Order Details" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LetterLanguageView" EntityType="Self.LetterLanguageView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LetterLanguageView].[Letter] AS [Letter], 
+    [LetterLanguageView].[Language] AS [Language]
+    FROM [dbo].[LetterLanguageView] AS [LetterLanguageView]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Order_Details_Orders" Association="Self.FK_Order_Details_Orders">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Order Details" EntitySet="Order Details" />
@@ -148,6 +163,7 @@
             <End Role="Order" EntitySet="Orders" />
             <End Role="Order_Detail" EntitySet="Order_Details" />
           </AssociationSet>
+          <EntitySet Name="LetterLanguageViews" EntityType="NorthwindModel.LetterLanguageView" />
         </EntityContainer>
         <ComplexType Name="CustOrderHist_Result">
           <Property Type="String" Name="ProductName" Nullable="false" MaxLength="40" />
@@ -262,6 +278,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="LetterLanguageView">
+          <Key>
+            <PropertyRef Name="Letter" />
+          </Key>
+          <Property Name="Letter" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -390,6 +413,14 @@
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LetterLanguageViews">
+            <EntityTypeMapping TypeName="NorthwindModel.LetterLanguageView">
+              <MappingFragment StoreEntitySet="LetterLanguageView">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Letter" ColumnName="Letter" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

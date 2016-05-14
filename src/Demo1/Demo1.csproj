@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.cs">
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="CustOrderHist_Result.cs">
       <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
@@ -63,6 +66,21 @@
     </Compile>
     <Compile Include="Employee_Sales_by_Country_Result.cs">
       <DependentUpon>NorthwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuidEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuidEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuidEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuidEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuidEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuidEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="ManyToManyEntities.Context.cs">
       <AutoGen>True</AutoGen>
@@ -94,10 +112,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ProductMovement.cs">
+    <Compile Include="Order.cs">
       <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProductType.cs">
+    <Compile Include="Order_Detail.cs">
       <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -122,6 +140,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ManyToManyEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="GuidEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GuidEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GuidEntities.edmx.diagram">
+      <DependentUpon>GuidEntities.edmx</DependentUpon>
+    </None>
     <None Include="ManyToManyEntities.edmx.diagram">
       <DependentUpon>ManyToManyEntities.edmx</DependentUpon>
       <SubType>Designer</SubType>
@@ -135,6 +160,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GuidEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GuidEntities.edmx</DependentUpon>
+      <LastGenOutput>GuidEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GuidEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GuidEntities.edmx</DependentUpon>
+      <LastGenOutput>GuidEntities.cs</LastGenOutput>
+    </Content>
     <Content Include="ManyToManyEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ManyToManyEntities.edmx</DependentUpon>

@@ -29,8 +29,19 @@ namespace Demo2
                 mapper.Map(customerModel, customer);
 
                 dbContext.ChangeTracker.DetectChanges();
+
+                RemoveOrphanOrders(dbContext);
+
                 dbContext.SaveChanges();
             }
+        }
+
+        // https://lostechies.com/jimmybogard/2014/05/08/missing-ef-feature-workarounds-cascade-delete-orphans/
+        private static void RemoveOrphanOrders(NorthwindEntities dbContext)
+        {
+            var localOrders = dbContext.Orders.Local;
+            foreach (var orphanOrder in localOrders.Where(x => x.CustomerID == null).ToList())
+                localOrders.Remove(dbContext.Orders.Find(orphanOrder.OrderID));
         }
 
         private static NorthwindEntities GetDbContext()

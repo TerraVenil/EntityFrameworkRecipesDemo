@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.EquivilencyExpression;
 using Demo2.Models;
 
 namespace Demo2
@@ -7,7 +8,9 @@ namespace Demo2
     {
         protected override void Configure()
         {
-            CreateMap<Order, OrderModel>().ReverseMap();
+            CreateMap<Order, OrderModel>();
+            CreateMap<OrderModel, Order>().EqualityComparision((src, dest) => src.OrderID == dest.OrderID);
+
             CreateMap<Customer, CustomerModel>().ReverseMap();
         }
     }

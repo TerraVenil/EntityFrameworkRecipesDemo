@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.Mappers;
 
 namespace Demo2
 {
@@ -9,6 +10,7 @@ namespace Demo2
             var config = new MapperConfiguration(
                 cfg =>
                 {
+                    cfg.AddProfile<CollectionProfile>();
                     cfg.AddProfile<CustomerProfile>();
                 });
 

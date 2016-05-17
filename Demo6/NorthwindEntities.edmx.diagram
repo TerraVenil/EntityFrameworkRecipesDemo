@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d1c7de4157f04791be6e1261994589f7" Name="Diagram1">
+        <EntityTypeShape EntityType="NorthwindModel.Employee" Width="1.5" PointX="6.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Order" Width="1.5" PointX="8.5" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="NorthwindModel.FK_Employees_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Orders_Employees" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NorthwindModel.Territory" Width="1.5" PointX="3.5" PointY="3.875" />
+        <AssociationConnector Association="NorthwindModel.EmployeeTerritories" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

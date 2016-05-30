@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RefactorThis.GraphDiff;
 
-namespace Demo3
+namespace Demo5
 {
     class Program
     {

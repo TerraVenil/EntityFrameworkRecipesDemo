@@ -7,8 +7,8 @@
     <ProjectGuid>{023D36F4-043A-45D0-A4E6-CF42F14E450F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo3</RootNamespace>
-    <AssemblyName>Demo3</AssemblyName>
+    <RootNamespace>Demo5</RootNamespace>
+    <AssemblyName>Demo5</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,17 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="RefactorThis.GraphDiff.ShiftDigital, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RefactorThis.GraphDiff.ShiftDigital.2.0.3\lib\net40\RefactorThis.GraphDiff.ShiftDigital.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="RefactorThis.GraphDiff.ShiftDigital">
+      <HintPath>..\..\packages\RefactorThis.GraphDiff.ShiftDigital.2.0.3\lib\net40\RefactorThis.GraphDiff.ShiftDigital.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

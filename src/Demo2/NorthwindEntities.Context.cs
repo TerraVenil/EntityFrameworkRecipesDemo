@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demo2
+namespace Demo5
 {
     using System;
     using System.Data.Entity;

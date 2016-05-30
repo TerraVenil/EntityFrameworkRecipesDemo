@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Demo4.Models
+namespace Demo2.Models
 {
     public class CustomerModel
     {

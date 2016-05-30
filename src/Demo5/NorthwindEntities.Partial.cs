@@ -1,7 +1,4 @@
-﻿using System.Data.Entity.Validation;
-using System.Linq;
-
-namespace Demo5
+﻿namespace Demo3
 {
     public partial class NorthwindEntities
     {

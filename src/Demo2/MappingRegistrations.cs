@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.Mappers;
 
-namespace Demo2
+namespace Demo5
 {
     public static class MappingRegistrations
     {

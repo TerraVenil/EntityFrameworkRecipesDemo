@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Diagnostics;
 
-namespace Demo5
+namespace Demo3
 {
     class Program
     {

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using Demo2.Models;
+using Demo5.Models;
 
-namespace Demo2
+namespace Demo5
 {
     class Program
     {

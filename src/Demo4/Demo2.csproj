@@ -7,8 +7,8 @@
     <ProjectGuid>{499E1647-B654-4FF8-BF9D-06DAF9AEE85F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo4</RootNamespace>
-    <AssemblyName>Demo4</AssemblyName>
+    <RootNamespace>Demo2</RootNamespace>
+    <AssemblyName>Demo2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

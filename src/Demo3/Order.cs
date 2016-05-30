@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demo3
+namespace Demo5
 {
     using System;
     using System.Collections.Generic;

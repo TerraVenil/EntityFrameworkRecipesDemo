@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using AutoMapper.EquivilencyExpression;
-using Demo2.Models;
+using Demo5.Models;
 
-namespace Demo2
+namespace Demo5
 {
     public class CustomerProfile : Profile
     {

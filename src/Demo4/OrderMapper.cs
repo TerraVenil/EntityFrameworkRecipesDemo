@@ -1,6 +1,6 @@
-﻿using Demo4.Models;
+﻿using Demo2.Models;
 
-namespace Demo4
+namespace Demo2
 {
     public static class OrderMapper
     {

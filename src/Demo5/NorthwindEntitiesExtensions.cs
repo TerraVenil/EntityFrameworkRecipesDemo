@@ -1,4 +1,4 @@
-﻿namespace Demo5
+﻿namespace Demo3
 {
     public static class NorthwindEntitiesExtensions
     {

@@ -13,8 +13,8 @@ namespace Demo5
 
             using (var dbContext = GetDbContext())
             {
-                var customerId = "ALFKI";
-                var customer = dbContext.Customers.Include(x => x.Orders).Single(x => x.CustomerID == customerId);
+                var customerId = "AROUT";
+                var customer = dbContext.Customers.Include(x => x.Orders.Select(o => o.Order_Details)).Single(x => x.CustomerID == customerId);
 
                 var customerModel = mapper.Map<CustomerModel>(customer);
 
@@ -35,7 +35,8 @@ namespace Demo5
         private static void RemoveOrphanOrders(NorthwindEntities dbContext)
         {
             var localOrders = dbContext.Orders.Local;
-            foreach (var orphanOrder in localOrders.Where(x => x.CustomerID == null).ToList())
+            var orphanOrders = localOrders.Where(x => x.CustomerID == null).ToList();
+            foreach (var orphanOrder in orphanOrders)
                 localOrders.Remove(dbContext.Orders.Find(orphanOrder.OrderID));
         }
 

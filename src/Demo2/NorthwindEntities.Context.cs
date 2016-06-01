@@ -27,5 +27,6 @@ namespace Demo5
     
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Order_Detail> Order_Details { get; set; }
     }
 }
